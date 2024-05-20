@@ -90,17 +90,17 @@ body {
 
 .pass-indicator#weak::before {
     width: 20%;
-    background: #E64A4A;
+    background: linear-gradient(to right, #8a2387, #e94057, #f27121);
 }
 
 .pass-indicator#medium::before {
     width: 50%;
-    background: #f1c80b;
+    background: linear-gradient(to right, #fdc830, #f37335);
 }
 
 .pass-indicator#strong::before {
     width: 100%;
-    background: #4285F4;
+    background: linear-gradient(to right, #00b4db, #0083b0);
 }
 
 .wrapper .pass-length {
@@ -157,7 +157,7 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    background: #4285F4;
+    background: linear-gradient(to right, #009fff, #ec2f4b);
     font-size: 1.06rem;
     padding: 0.94rem 0;
     border-radius: 5px;
