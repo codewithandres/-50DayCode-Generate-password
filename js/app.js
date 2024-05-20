@@ -2,7 +2,8 @@
 const lenghtSlider = document.querySelector('.pass-length input'),
     generateBtn = document.querySelector('.generate-btn'),
     passwordInput = document.querySelector('.input-box input'),
-    options = document.querySelectorAll('.options input');
+    options = document.querySelectorAll('.options input'),
+    passwordIndicator = document.querySelector('.pass-indicator');
 
 const characters = { // object of letters, numbers & symbols
     lowercase: "abcdefghijklmnopqrstuvwxyz",
@@ -52,10 +53,21 @@ const generatePassword = () => {
     passwordInput.value = randownPassword
 };
 
+const updatePasswordIndicator = () => {
+    passwordIndicator.id = lenghtSlider.value <= 8
+        ?
+        'weak'
+        :
+        lenghtSlider.value <= 16
+            ?
+            'medium' : 'strong'
+};
+
 const updateSlider = () => {
 
     document.querySelector('.pass-length span').textContent = lenghtSlider.value;
     generatePassword();
+    updatePasswordIndicator();
 };
 
 updateSlider();
